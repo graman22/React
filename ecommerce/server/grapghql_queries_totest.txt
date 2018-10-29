@@ -1,0 +1,55 @@
+mutation{
+
+addUser(name:"ghanesh",is_admin:"no"){
+id
+name
+}
+}
+
+
+
+
+mutation{
+addVegetable(name:"potato",price:25,description:"organic potato"){
+name
+price
+description
+}
+}
+
+
+{
+  vegetables{
+    id,
+    name,
+    price,
+    description
+	}
+}
+
+
+{
+  vegetable(id:"5bc6d4b0cc5e9a2804663f6d") {
+    name,
+    price,
+    description
+  }
+}
+
+{
+  vegetableByName(name:"potato") {
+    name,
+    price,
+    description
+  }
+}
+
+mutation{
+purchase(uid:"5bc632ecdba66d596c1d1bf7",vid:"5bc6d4b0cc5e9a2804663f6d",quantity:2,totprice:50) {
+uid,vid,totprice
+}
+}
+
+
+
+
